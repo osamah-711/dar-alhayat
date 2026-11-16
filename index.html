@@ -1,12 +1,4 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow">
-<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-</head>
-<body>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"></head><body>
 <title>منظومة الحياة</title>
 <meta name="author" content="م. أسامة محمد">
 <meta name="copyright" content="© 2026 م. أسامة محمد. جميع الحقوق محفوظة">
@@ -323,6 +315,9 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
   .auth-art{display:none}
   .stage{justify-items:center;padding-block:20px}
   .parent-band{padding:34px}
+  /* band kgrid stack on tablet */
+  .kgrid{grid-template-columns:repeat(3,1fr)}
+  .band .bh{flex-direction:column;align-items:flex-start}
 }
 @media (max-width:560px){
   .doors,.modules,.roles,.grid2{grid-template-columns:1fr}
@@ -333,6 +328,36 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
   .hero{min-height:720px}
   .hero-copy{padding-top:150px}
   .hb{grid-template-columns:90px 1fr 42px}
+  /* band / kgrid mobile fixes */
+  .band{padding:20px 18px;border-radius:20px}
+  .band h1{font-size:28px}
+  .band p{font-size:13.5px}
+  .kg{padding:12px 14px;border-radius:14px}
+  .kg b{font-size:20px;margin-top:8px}
+  .kg .ki{width:30px;height:30px;border-radius:9px}
+  .kg .ki .ico{width:16px;height:16px}
+  .kg span{font-size:12px}
+  .kg em{font-size:11px}
+  /* gs stats cards mobile */
+  .gs{padding:16px 18px;border-radius:18px}
+  .gs b{font-size:24px}
+  .gs-i{width:34px;height:34px;border-radius:10px}
+  .gs-l{font-size:12.5px}
+  .gs small{font-size:12px}
+  /* hierarchy cards mobile */
+  .xc{padding:16px;border-radius:18px}
+  .xc-i{width:38px;height:38px;border-radius:12px}
+  .xc-t h3{font-size:15px}
+  .xc-st b{font-size:16px}
+  /* bc branch cards */
+  .bc-top{min-height:auto;padding:16px}
+  .bc-top h3{font-size:16px!important}
+  /* door cards */
+  .door{padding:40px 16px 20px;border-radius:120px 120px 18px 18px}
+  .door h3{font-size:21px;padding-inline-end:0!important;text-align:center}
+  .door .code{padding-inline-end:0!important;text-align:center}
+  .ring{width:76px;height:76px}
+  .ring b{font-size:18px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 @keyframes flicker{0%,100%{opacity:.85}50%{opacity:1}}
@@ -824,7 +849,53 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
 
 .hx>.wrap{width:100%}.bc-top{min-height:156px}.gs small{display:block}
 .band .seg{background:rgba(255,255,255,.15)!important}.band .seg button{color:#fff}.band .seg button.on{background:#fff!important;color:#1D6A75!important}
-@media (max-width:560px){.hx-emb .emb{width:min(320px,78vw)}.hx{padding-top:110px}.hx-copy h1{font-size:36px}.nx .nav-in{padding:8px 10px}.nx .brand small{display:none}.nx .nav-act .btn{padding:8px 12px;font-size:12.5px}}
+@media (max-width:560px){
+  .hx-emb .emb{width:min(320px,78vw)}
+  .hx{padding-top:110px}
+  .hx-copy h1{font-size:36px}
+  .nx .nav-in{padding:8px 10px}
+  .nx .brand small{display:none}
+  .nx .nav-act .btn{padding:8px 12px;font-size:12.5px}
+  /* emblem nodes smaller */
+  .node{font-size:11px;padding:4px 8px;gap:5px}
+  .node i{width:7px;height:7px}
+  /* trust row: stack on tiny screens */
+  .hx .trust{gap:10px 18px;font-size:13px;justify-content:center}
+  /* lane titles no wrap */
+  .lane-h b{font-size:15px;white-space:nowrap}
+  .lane-h small{font-size:11.5px}
+  /* door cards branch names */
+  .door h3{font-size:22px}
+  .door .code{font-size:11px}
+  /* pillars */
+  .pillar h3{font-size:22px}
+  .pillar p{font-size:14px}
+  /* stops in journey */
+  .stop h3{font-size:16px}
+  .stop .m{width:80px;height:80px}
+  .stop .m b{font-size:22px}
+  .stop .c{font-size:11px;padding:2px 9px}
+  /* modules: text sizing */
+  .mx h3{font-size:19px}
+  /* emb-cap smaller text */
+  .emb-cap .bn{font-size:15px}
+  .emb-cap b{font-size:15px}
+  /* confidentiality note */
+  .conf{font-size:11px;text-align:center;justify-content:center;flex-wrap:wrap}
+  /* section headings */
+  .sec-h h2{font-size:28px}
+  .sec-h p{font-size:15px}
+}
+/* hero text center on mobile */
+@media (max-width:980px){
+  .hx-copy{text-align:center}
+  .hx-copy .ctas{justify-content:center}
+  .hx .trust{justify-content:center}
+  .hx-copy .motto2{margin-inline:auto}
+  .hx-copy .lead{margin-inline:auto}
+  .hx-emb{margin-top:30px}
+  .conf{justify-content:center;text-align:center}
+}
 
 /* emblem disc: brand gradient glass instead of plain white */
 .hx .emb .r1{background:radial-gradient(circle at 50% 38%,rgba(108,194,204,.62) 0%,rgba(42,135,148,.55) 42%,rgba(18,76,85,.62) 70%,rgba(18,76,85,0) 71%)!important;box-shadow:inset 0 0 0 2px rgba(252,199,9,.55),0 0 0 10px rgba(255,255,255,.05),0 40px 80px -30px rgba(0,0,0,.55)!important;border:0!important;backdrop-filter:blur(6px)}
@@ -878,7 +949,7 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
 .lbl em{font-style:normal;color:#2A8794;font-weight:600}
 
 #stuBr,#stfBr,.brg{grid-template-columns:repeat(5,minmax(0,1fr))}
-.stage h1{font-size:44px!important}
+.stage h1{font-size:clamp(28px,5vw,44px)!important}
 @media (max-width:1280px){#stuBr,#stfBr,.brg{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:760px){#stuBr,#stfBr,.brg{grid-template-columns:1fr}}
 .xgrid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}.brg .bc-top h3,#stuBr .bc-top h3,#stfBr .bc-top h3{font-size:17px}
@@ -1533,5 +1604,4 @@ window.addEventListener('hashchange',route);route();
 })();
 </script>
 
-</body>
-</html>
+</body></html>
