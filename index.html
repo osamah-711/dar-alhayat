@@ -368,11 +368,16 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
   .ring{width:76px;height:76px}
   .ring b{font-size:18px}
   /* topbar mobile */
-  .topbar{padding:10px 14px;gap:10px}
-  .topbar .ttl b{font-size:16px}
-  .topbar .ttl small{font-size:11px}
-  .topbar .ttl{gap:7px}
-  .acct .av{width:32px;height:32px;border-radius:9px;font-size:13px}
+  .topbar{padding:10px 14px;gap:8px}
+  .topbar .ttl{flex:1;min-width:0;gap:6px}
+  .topbar .ttl b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .topbar .ttl small{font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .topbar .ttl i{width:7px;height:7px;flex-shrink:0}
+  .ibtn{width:36px;height:36px;border-radius:11px}
+  .ibtn .ico{width:18px;height:18px}
+  .ibtn i{top:7px;left:8px;width:7px;height:7px}
+  .acct{padding:3px 8px 3px 3px;border-radius:11px;gap:6px}
+  .acct .av{width:30px;height:30px;border-radius:9px;font-size:12px}
   /* student card mobile */
   #v-student>.band{padding:18px 14px}
   #v-student .bh>div>div:first-child{width:60px;height:60px;border-radius:18px;font-size:28px}
@@ -389,8 +394,9 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
   /* behavior scores 1-col on mobile */
   #v-student .card-b>[style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important;gap:8px}
   /* tabs-in mobile */
-  .tabs-in{padding:0 14px;gap:2px}
-  .tabs-in a{padding:10px 10px;font-size:12.5px}
+  .tabs-in{padding:0 12px;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs-in::-webkit-scrollbar{display:none}
+  .tabs-in a{padding:10px 12px;font-size:13px;flex-shrink:0}
   /* card headers mobile */
   .card-h{padding:14px 14px 10px;gap:10px}
   .card-h h3{font-size:15px}
