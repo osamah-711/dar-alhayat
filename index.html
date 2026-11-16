@@ -834,6 +834,54 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
 .hx .emb #embLine{stroke:#FCC709}
 .hx .emb .core{box-shadow:0 0 0 6px rgba(252,199,9,.85),0 0 0 14px rgba(255,255,255,.12),0 30px 60px -24px rgba(0,0,0,.6)!important}
 .hx .emb-cap{background:linear-gradient(135deg,#FFFFFF 0%,#EEF8F9 100%)}
+
+/* hierarchy */
+.crumbs{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13.5px;color:var(--muted);margin:0 0 14px}
+.crumbs a{color:var(--teal-d);font-weight:500;background:#EEF8F9;border-radius:20px;padding:4px 12px}
+.crumbs a:hover{background:#E1F2F5}
+.crumbs i{width:6px;height:6px;transform:rotate(45deg);background:#FCC709}
+.crumbs b{color:var(--navy);font-weight:600}
+.xgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px;margin-top:20px}
+#stuBr,#stfBr{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.xgrid .bc{display:block;color:inherit}
+.bc-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.bc-chips .chip{font-size:11.5px;padding:2px 9px}
+.xc-go{display:block;margin-top:14px;font-size:13px;font-weight:600;color:var(--teal-d)}
+.xc{position:relative;display:flex;flex-direction:column;border-radius:22px;padding:20px;background:linear-gradient(170deg,#FFFFFF 0%,#F3FAFB 100%);box-shadow:0 24px 40px -36px rgba(29,106,117,.7),inset 0 0 0 1px #DCEFF2;overflow:hidden;transition:transform .2s,box-shadow .2s;color:inherit}
+.xc:before{content:"";position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,#FCC709,#53B1BD,#1D6A75)}
+.xc:hover{transform:translateY(-4px);box-shadow:0 30px 50px -34px rgba(29,106,117,.8),inset 0 0 0 1px #9CD3DA}
+.xc-top{display:flex;align-items:flex-start;gap:12px}
+.xc-i{width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,#1D6A75,#53B1BD);color:#fff;display:grid;place-items:center;flex:none;box-shadow:0 10px 20px -12px rgba(29,106,117,.9)}
+.xc-t{flex:1;min-width:0}
+.xc-t h3{font-size:17px;color:var(--navy);line-height:1.35}
+.xc-t small{color:var(--muted);font-size:12.5px}
+.xc-tag{font-size:11.5px;color:#1D6A75;background:#E6F4F6;border-radius:20px;padding:2px 10px;white-space:nowrap}
+.xc-st{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;margin-top:16px;padding:12px 0;border-block:1px dashed #DCEFF2}
+.xc-st b{display:block;font-family:var(--f-display);font-size:18px;color:var(--navy)}
+.xc-st small{color:var(--muted);font-size:12px}
+.xc-bar{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin:12px 0 6px}
+.xc-bar b{color:var(--teal-dd)}
+.xc.more{align-items:center;justify-content:center;text-align:center;gap:8px;background:repeating-linear-gradient(45deg,#F7FBFC,#F7FBFC 10px,#EEF8F9 10px,#EEF8F9 20px)}
+.xc.more b{font-family:var(--f-display);font-size:18px;color:var(--navy)}
+.xc.more small{color:var(--muted);font-size:12.5px;max-width:28ch}
+
+.howto{margin:16px 0 0;padding:0 20px 0 0;display:flex;flex-direction:column;gap:8px;font-size:15px;color:var(--ink-2)}
+.howto li::marker{color:#2A8794;font-weight:700}
+.howto b{color:var(--navy)}
+.urlbar{display:flex;align-items:center;gap:6px;justify-content:center;font-size:11.5px;color:#fff;background:rgba(255,255,255,.14);border-radius:20px;padding:4px 10px;margin:-14px auto 10px;width:max-content;max-width:100%}
+.urlbar .ico{width:13px;height:13px;color:#FCC709}
+.tnote{background:#FFF8DC;border-radius:14px;padding:10px 12px;font-size:12px;color:#6B5200;margin-bottom:10px;box-shadow:inset 0 0 0 1px #F6E2A0;line-height:1.7}
+.tnote b{display:block;color:#8A6500;font-size:12.5px}
+.pick{display:flex;gap:5px;margin-top:4px;flex-wrap:wrap}
+.pk{font-size:12px;background:#F1F8F9;border-radius:9px;padding:5px 9px;color:var(--ink-2);box-shadow:inset 0 0 0 1px #DCEFF2}
+.pk.s{background:#E6F4F6;color:var(--teal-dd);font-weight:600}
+.lbl em{font-style:normal;color:#2A8794;font-weight:600}
+
+#stuBr,#stfBr,.brg{grid-template-columns:repeat(5,minmax(0,1fr))}
+.stage h1{font-size:44px!important}
+@media (max-width:1280px){#stuBr,#stfBr,.brg{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){#stuBr,#stfBr,.brg{grid-template-columns:1fr}}
+.xgrid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}.brg .bc-top h3,#stuBr .bc-top h3,#stfBr .bc-top h3{font-size:17px}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1126,9 +1174,13 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
   </div>
 </section>
 
-<!-- STUDENTS -->
-<section class="view" id="v-students">
-  <div class="band"><div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>الأشخاص</span><h1 style="margin-top:6px">الطلاب</h1><p class="tn">21,480 طالباً · ترتيب وبحث وتصدير</p></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-glass btn-sm" data-toast="تم تصدير الكشف إلى Excel (استعراضي)">Excel</button><button class="btn btn-glass btn-sm" data-toast="تم إنشاء PDF للطباعة (استعراضي)">PDF</button><a class="btn btn-gold btn-sm" href="#register"><svg class="ico"><use href="#i-plus"/></svg>طالب جديد</a></div></div></div>
+<!-- STUDENTS: branches -->
+<section class="view" id="v-students"><div class="band" id="bStu"></div><div class="xgrid" id="stuBr"></div></section>
+<section class="view" id="v-stu-branch"><div class="crumbs" id="crStuB"></div><div class="band" id="bStuB"></div><div class="xgrid" id="stuSecs"></div></section>
+<section class="view" id="v-stu-sec"><div class="crumbs" id="crStuS"></div><div class="band" id="bStuS"></div><div class="xgrid" id="stuHals"></div></section>
+<!-- STUDENTS: list -->
+<section class="view" id="v-stu-list"><div class="crumbs" id="crStuL"></div>
+  <div class="band"><div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>الأشخاص</span><h1 style="margin-top:6px" id="lstTitle">الطلاب</h1><p class="tn" id="lstSub">ترتيب وبحث وتصدير</p></div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-glass btn-sm" data-toast="تم تصدير الكشف إلى Excel (استعراضي)">Excel</button><button class="btn btn-glass btn-sm" data-toast="تم إنشاء PDF للطباعة (استعراضي)">PDF</button><a class="btn btn-gold btn-sm" href="#register"><svg class="ico"><use href="#i-plus"/></svg>طالب جديد</a></div></div></div>
   <div class="card" style="margin-top:20px"><div class="card-h" style="flex-wrap:wrap"><span class="hi"><svg class="ico"><use href="#i-cap"/></svg></span><div><h3>كشف الطلاب</h3><small>اضغط على أي طالب لفتح ملفه</small></div><div class="act" style="flex-wrap:wrap"><select class="sel" id="fBranch" aria-label="الفرع"><option value="">كل الفروع</option></select><select class="sel" id="fPath" aria-label="المسار"><option value="">كل المسارات</option><option>تأسيس</option><option>قرآن</option></select><select class="sel" id="fStatus" aria-label="الحالة"><option value="">كل الحالات</option><option>منتظم</option><option>متأخر</option><option>منقطع</option></select><select class="sel" id="fSort" aria-label="الترتيب"><option value="name">الترتيب: الاسم</option><option value="prog">نسبة الإنجاز</option><option value="age">العمر</option></select></div></div><div class="tbl-wrap"><table class="t" id="stuTbl"></table></div></div>
 </section>
 
@@ -1164,14 +1216,18 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
   </div>
 </section>
 
-<!-- STAFF -->
-<section class="view" id="v-staff">
-  <div class="band"><div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>الأشخاص</span><h1 style="margin-top:6px">العاملون</h1><p>ملفات المعلمين والمشرفين والمديرين وحضورهم وتقييماتهم.</p></div><div style="display:flex;gap:8px"><span class="chip g tn">1,190 عاملاً</span></div></div></div>
+<!-- STAFF: branches -->
+<section class="view" id="v-staff"><div class="band" id="bStf"></div><div class="xgrid" id="stfBr"></div></section>
+<section class="view" id="v-staff-branch"><div class="crumbs" id="crStfB"></div><div class="band" id="bStfB"></div><div class="xgrid" id="stfRoles"></div></section>
+<!-- STAFF: list -->
+<section class="view" id="v-staff-list"><div class="crumbs" id="crStfL"></div>
+  <div class="band"><div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>الأشخاص</span><h1 style="margin-top:6px" id="stfTitle">العاملون</h1><p id="stfSub">ملفات المعلمين والمشرفين والمديرين وحضورهم وتقييماتهم.</p></div><div style="display:flex;gap:8px"><span class="chip g tn">1,190 عاملاً</span></div></div></div>
   <div class="card" style="margin-top:20px"><div class="card-h"><span class="hi"><svg class="ico"><use href="#i-users"/></svg></span><div><h3>سجل العاملين</h3><small>تقييم أكتوبر ونسبة الانضباط</small></div><div class="act"><select class="sel" aria-label="الوظيفة"><option>كل الوظائف</option><option>معلم</option><option>مشرف</option><option>مدير فرع</option></select></div></div><div class="tbl-wrap"><table class="t" id="staffTbl"></table></div></div>
 </section>
 
 <!-- TARGETS -->
-<section class="view" id="v-targets">
+<section class="view" id="v-targets"><div class="band" id="bTg"></div><div class="xgrid brg" id="tgBr"></div></section>
+<section class="view" id="v-tg-run"><div class="crumbs" id="crTg"></div>
   <div class="band"><div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>الأداء</span><h1 style="margin-top:6px">المستهدفات والإنجازات</h1><p>الخطة مقابل المُنجز لكل مستوى، محسوبة تلقائياً.</p></div><div class="seg" id="tgLevel" style="background:rgba(255,255,255,.08)"><button type="button">سنوي</button><button type="button" class="on">شهري</button><button type="button">أسبوعي</button><button type="button">يومي</button></div></div></div>
   <div class="grid">
     <div class="card c4"><div class="card-h"><span class="hi"><svg class="ico"><use href="#i-target"/></svg></span><div><h3>المؤسسة · نوفمبر</h3><small>مؤشر درجات إنجاز الحفظ</small></div></div><div class="card-b" style="text-align:center">
@@ -1184,7 +1240,9 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
 </section>
 
 <!-- EVALUATION -->
-<section class="view" id="v-evaluation">
+<section class="view" id="v-evaluation"><div class="band" id="bEv"></div><div class="xgrid brg" id="evBr"></div></section>
+<section class="view" id="v-eval-branch"><div class="crumbs" id="crEvB"></div><div class="band" id="bEvB"></div><div class="xgrid" id="evTypes"></div></section>
+<section class="view" id="v-eval-run"><div class="crumbs" id="crEvR"></div>
   <div class="band"><div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>الأداء</span><h1 style="margin-top:6px">التقييم</h1><p>عينة الطلاب الأسبوعية، ونماذج تقييم العاملين ببنود وأوزان تحددها الإدارة.</p></div></div></div>
   <div class="grid">
     <div class="card c6"><div class="card-h"><span class="hi"><svg class="ico"><use href="#i-users"/></svg></span><div><h3>سحب عينة الأسبوع</h3><small>حلقات أ. ياسر حسن</small></div></div><div class="card-b">
@@ -1203,7 +1261,9 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
 </section>
 
 <!-- FOLLOWUP -->
-<section class="view" id="v-followup">
+<section class="view" id="v-followup"><div class="band" id="bFu"></div><div class="xgrid brg" id="fuBr"></div></section>
+<section class="view" id="v-fu-branch"><div class="crumbs" id="crFuB"></div><div class="band" id="bFuB"></div><div class="xgrid" id="fuTypes"></div></section>
+<section class="view" id="v-fu-list"><div class="crumbs" id="crFuL"></div>
   <div class="band"><div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>المتابعة</span><h1 style="margin-top:6px">المنقطعون والمتأخرون</h1><p>المنقطع بالأحمر، والمتأخر عن خطة مرحلته بالبرتقالي والأصفر.</p></div></div>
     <div class="kgrid" style="grid-template-columns:repeat(3,1fr)"><div class="kg"><div class="ki" style="background:linear-gradient(135deg,#C2412F,#E07A63);color:#fff"><svg class="ico"><use href="#i-alert"/></svg></div><b class="tn">142</b><span>منقطعون</span></div><div class="kg"><div class="ki" style="background:linear-gradient(135deg,#D9822B,#F0B46B);color:#2A1F04"><svg class="ico"><use href="#i-clock"/></svg></div><b class="tn">386</b><span>متأخرون عن الخطة</span></div><div class="kg"><div class="ki"><svg class="ico"><use href="#i-check"/></svg></div><b class="tn">97</b><span>تحت المتابعة</span></div></div>
   </div>
@@ -1214,7 +1274,8 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
 </section>
 
 <!-- FINANCE -->
-<section class="view" id="v-finance">
+<section class="view" id="v-finance"><div class="band" id="bFin"></div><div class="xgrid brg" id="finBr"></div></section>
+<section class="view" id="v-fin-run"><div class="crumbs" id="crFin"></div>
   <div class="band"><div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>المالية</span><h1 style="margin-top:6px">الرسوم والتحصيل</h1><p>المستحق والمدفوع والمتبقي لكل طالب، وإيصال مرقم لكل عملية.</p></div><button class="btn btn-gold btn-sm" data-act="receipt"><svg class="ico"><use href="#i-plus"/></svg>إيصال جديد</button></div>
     <div class="kgrid" style="grid-template-columns:repeat(4,1fr)"><div class="kg"><div class="ki"><svg class="ico"><use href="#i-wallet"/></svg></div><b class="tn">18,450</b><span>تحصيل اليوم</span><em class="tn">124 إيصالاً</em></div><div class="kg"><div class="ki"><svg class="ico"><use href="#i-chart"/></svg></div><b class="tn">412,300</b><span>تحصيل الشهر</span><em class="tn">من 486,000 مستحق</em></div><div class="kg"><div class="ki"><svg class="ico"><use href="#i-target"/></svg></div><b class="tn">84.8%</b><span>نسبة التحصيل</span><em class="tn">+2.1%</em></div><div class="kg"><div class="ki" style="background:linear-gradient(135deg,#C2412F,#E07A63);color:#fff"><svg class="ico"><use href="#i-clock"/></svg></div><b class="tn">1,036</b><span>متأخرون عن السداد</span><em>أُرسل تنبيه لأوليائهم</em></div></div>
   </div>
@@ -1232,9 +1293,11 @@ table.t{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
 
 <!-- TEACHER -->
 <section class="view" id="v-teacher"><div class="stage">
-  <div><span class="eyebrow d"><i></i>دفتر الحلقة · المعلم</span><h1 style="margin-top:10px">الحلقة كاملة<br>من الجوال في دقائق</h1><p>اضغط الحضور واختر درجة الحفظ والمراجعة. السورة تُقترح من آخر تسجيل، والغياب المتكرر ينبّه المشرف تلقائياً.</p><div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap"><span class="chip">يعمل عند ضعف الإنترنت</span><span class="chip g">يُثبَّت كتطبيق</span></div><p style="color:var(--muted);font-size:13px;margin-top:16px">جرّب الضغط على الأزرار داخل الجوال.</p></div>
+  <div><span class="eyebrow d"><i></i>دفتر الحلقة · المعلم</span><h1 style="margin-top:10px">الحلقة كاملة<br>برابط من الجوال</h1><p>دفتر الحلقة رابط يفتحه المعلم من متصفح جواله بحسابه، بلا تطبيق ولا تثبيت.</p>
+  <ol class="howto"><li><b>الحضور:</b> حاضر أو غائب أو مستأذن لكل طالب.</li><li><b>الحفظ الجديد:</b> يختار السورة، ثم من آية إلى آية.</li><li><b>تقييم الحفظ:</b> درجة من 10 حسب جودة التسميع.</li><li><b>المراجعة:</b> المقدار المراجَع، ثم تقييمه من 10.</li><li><b>حفظ وإرسال:</b> يصل للمشرف ولولي الأمر فوراً.</li></ol>
+  <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap"><span class="chip">رابط يفتح من أي متصفح</span><span class="chip g">السورة تُقترح من آخر تسجيل</span></div><p style="color:var(--muted);font-size:13px;margin-top:16px">جرّب الضغط على الأزرار داخل الجوال.</p></div>
   <div class="phone"><div class="scr">
-    <div class="scr-top"><div class="pat"></div><div style="font-size:12.5px;color:#D2ECF0">فرع خلود · الفترة الصباحية</div><h4>حلقة الفاروق</h4><div class="tn" style="display:flex;gap:6px;margin-top:10px;font-size:12px"><span style="background:rgba(255,255,255,.12);padding:3px 10px;border-radius:20px" id="tPresent">حاضر 0</span><span style="background:rgba(255,255,255,.12);padding:3px 10px;border-radius:20px" id="tAbsent">غائب 0</span><span style="background:var(--gold-grad);color:#2A1F04;padding:3px 10px;border-radius:20px;font-weight:600">الأحد</span></div></div>
+    <div class="scr-top"><div class="pat"></div><div class="urlbar"><svg class="ico"><use href="#i-lock"/></svg>رابط دفتر الحلقة · من المتصفح</div><div style="font-size:12.5px;color:#D2ECF0">فرع خلود · الفترة الصباحية</div><h4>حلقة الفاروق</h4><div class="tn" style="display:flex;gap:6px;margin-top:10px;font-size:12px"><span style="background:rgba(255,255,255,.12);padding:3px 10px;border-radius:20px" id="tPresent">حاضر 0</span><span style="background:rgba(255,255,255,.12);padding:3px 10px;border-radius:20px" id="tAbsent">غائب 0</span><span style="background:var(--gold-grad);color:#2A1F04;padding:3px 10px;border-radius:20px;font-weight:600">الأحد</span></div></div>
     <div class="scr-body" id="tList"></div>
     <div class="scr-cta"><button data-act="tsave">حفظ وإرسال</button></div>
   </div></div>
@@ -1348,9 +1411,10 @@ const RP=[['الطلاب','cap',['حسب الفرع والمرحلة','حسب ا
 $('#repGrid').innerHTML=RP.map(r=>`<div class="card c6"><div class="card-h"><span class="hi">${ic(r[1])}</span><div><h3>تقارير ${r[0]}</h3><small class="tn">${r[2].length} تقارير</small></div></div><div class="card-b">${r[2].map(x=>`<div class="li" style="font-size:14px"><span style="display:flex;align-items:center;gap:10px"><span style="width:8px;height:8px;transform:rotate(45deg);background:var(--gold)"></span>${x}</span><span style="display:flex;gap:6px"><button class="btn btn-line btn-sm" style="padding:5px 10px" data-toast="تقرير «${x}» PDF (استعراضي)">PDF</button><button class="btn btn-line btn-sm" style="padding:5px 10px" data-toast="تقرير «${x}» Excel (استعراضي)">Excel</button></span></div>`).join('')}</div></div>`).join('');
 
 // teacher
-const TS=[['عبدالله سالم','الملك · آية 15'],['محمد أحمد','القلم · آية 8'],['يوسف خالد','الحاقة · آية 1'],['سعيد علي','المعارج · آية 20'],['عمر فيصل','نوح · آية 4'],['خالد منصور','الجن · آية 11'],['فارس عادل','المزمل · آية 6']];
+const SUR=['الملك','القلم','الحاقة','المعارج','نوح','الجن','المزمل'];
+const TS=[['عبدالله سالم',0,1,15,'جزء عمّ'],['محمد أحمد',1,1,8,'النبأ – النازعات'],['يوسف خالد',2,1,12,'جزء عمّ'],['سعيد علي',3,1,10,'—'],['عمر فيصل',4,1,9,'عبس – التكوير'],['خالد منصور',5,1,11,'جزء عمّ'],['فارس عادل',6,1,10,'المطففين – الانشقاق']];
 const TState=TS.map((s,i)=>({a:i===3?'a':'p',h:[9,8,0,0,10,7,8][i],r:[8,8,0,0,9,7,9][i]}));
-function renderT(){$('#tList').innerHTML=TS.map((s,i)=>{const st=TState[i],abs=st.a==='a';return `<div class="stu ${i===2?'cur':''}" data-i="${i}"><div class="stu-h"><span class="av-s" style="${abs?'background:var(--red-l);color:var(--red)':''}">${s[0][0]}</span><div class="nm"><b>${s[0]}</b><small style="${i===3?'color:var(--red)':''}">${i===3?'غائب للمرة الثالثة · أُشعر المشرف':s[1]}</small></div>${st.h>=9&&!abs?'<span class="chip g">ممتاز</span>':''}</div><div class="att">${[['p','حاضر'],['a','غائب'],['e','مستأذن']].map(x=>`<button class="${x[0]} ${st.a===x[0]?'on':''}" data-t="a" data-v="${x[0]}">${x[1]}</button>`).join('')}</div>${abs?'':`<div class="lbl">الحفظ الجديد</div><div class="dots">${[6,7,8,9,10].map(v=>`<button class="${st.h===v?'on':''}" data-t="h" data-v="${v}">${v}</button>`).join('')}</div><div class="lbl">المراجعة</div><div class="dots">${[6,7,8,9,10].map(v=>`<button class="${st.r===v?'on':''}" data-t="r" data-v="${v}">${v}</button>`).join('')}</div>`}</div>`}).join('');const p=TState.filter(s=>s.a!=='a').length;$('#tPresent').textContent='حاضر '+p;$('#tAbsent').textContent='غائب '+(TState.length-p)}
+function renderT(){$('#tList').innerHTML=`<div class="tnote"><b>طريقة التسجيل</b>اختر السورة ومن آية إلى آية، ثم قيّم الحفظ من 10، وكذلك المراجعة.</div>`+TS.map((s,i)=>{const st=TState[i],abs=st.a==='a';return `<div class="stu ${i===2?'cur':''}" data-i="${i}"><div class="stu-h"><span class="av-s" style="${abs?'background:var(--red-l);color:var(--red)':''}">${s[0][0]}</span><div class="nm"><b>${s[0]}</b><small style="${i===3?'color:var(--red)':''}">${i===3?'غائب للمرة الثالثة · أُشعر المشرف':'آخر حفظ: سورة '+SUR[s[1]]}</small></div>${st.h>=9&&!abs?'<span class="chip g">ممتاز</span>':''}</div><div class="att">${[['p','حاضر'],['a','غائب'],['e','مستأذن']].map(x=>`<button class="${x[0]} ${st.a===x[0]?'on':''}" data-t="a" data-v="${x[0]}">${x[1]}</button>`).join('')}</div>${abs?'':`<div class="lbl">الحفظ الجديد</div><div class="pick"><span class="pk s">سورة ${SUR[s[1]]} ▾</span><span class="pk">من آية ${s[2]}</span><span class="pk">إلى آية ${s[3]}</span></div><div class="lbl">تقييم الحفظ <em>من 10</em></div><div class="dots">${[6,7,8,9,10].map(v=>`<button class="${st.h===v?'on':''}" data-t="h" data-v="${v}">${v}</button>`).join('')}</div><div class="lbl">المراجعة</div><div class="pick"><span class="pk s">${s[4]} ▾</span></div><div class="lbl">تقييم المراجعة <em>من 10</em></div><div class="dots">${[6,7,8,9,10].map(v=>`<button class="${st.r===v?'on':''}" data-t="r" data-v="${v}">${v}</button>`).join('')}</div>`}</div>`}).join('');const p=TState.filter(s=>s.a!=='a').length;$('#tPresent').textContent='حاضر '+p;$('#tAbsent').textContent='غائب '+(TState.length-p)}
 renderT();
 $('#tList').addEventListener('click',e=>{const b=e.target.closest('button[data-t]');if(!b)return;const i=+b.closest('.stu').dataset.i,t=b.dataset.t;TState[i][t]=t==='a'?b.dataset.v:+b.dataset.v;const sc=$('#tList').scrollTop;renderT();$('#tList').scrollTop=sc});
 $('#pRate').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;[...b.parentNode.children].forEach(c=>c.classList.toggle('on',c===b));toast('شكراً، وصل تقييمك لسلوك ابنك')});
@@ -1377,12 +1441,94 @@ box.addEventListener('click',e=>{const n=e.target.closest('.node');if(n){stop();
 $('#emb').addEventListener('mouseleave',start);start();})();
 
 
+
+// ===== hierarchical navigation: branches > sections > halaqat > list (students) ; branches > roles > list (staff)
+const CTX={b:0,s:0,h:0,r:0};
+const SECS=[['قسم البنين · قرآن','صباحية','book',.30,'بنين'],['قسم البنات · قرآن','مسائية','book',.36,'بنات'],['التأسيس · بنين وبنات','صباحية','pen',.26,'مختلط'],['ما بعد الفجر','فجرية','clock',.08,'بنين']];
+const SUPN=['أ. ياسر حسن','أ. منى أحمد','أ. عادل سعيد','أ. هدى علي','أ. سامي ناصر','أ. ريم خالد'];
+const HNB=['الصديق','الفاروق','ذو النورين','الإمام علي','ابن مسعود','أبي بن كعب','زيد بن ثابت','معاذ بن جبل','مصعب بن عمير','سعد بن معاذ'];
+const HNG=['أم سلمة','خديجة','عائشة','فاطمة الزهراء','أسماء','حفصة','سمية','رقية','زينب','أم عمارة'];
+const TNB=['أ. خالد عمر','أ. فهد ناصر','أ. عمر سعيد','أ. ماجد علي','أ. حمزة يوسف','أ. سالم الكثيري','أ. بلال حسن','أ. أنس محمود','أ. طارق زيد','أ. وليد سعد'];
+const TNG=['أ. نورة سعيد','أ. مريم أحمد','أ. هند علي','أ. سارة خالد','أ. أمل محمد','أ. ليلى حسن','أ. رحاب صالح','أ. عبير سعد','أ. منيرة فهد','أ. دعاء عمر'];
+const GN=['جنى','ريم','لمى','سارة','مريم','هيا','رزان','نورة','دانة','شهد','غلا','أروى','ملك','تالا','جود','لين','رهف','ليان','عائشة','فاطمة'];
+const rr=k=>{const x=Math.sin(k*12.9898+78.233)*43758.5453;return x-Math.floor(x)};
+const pct=v=>v+'%';
+function secData(b,i){const B=BR[b],S=SECS[i];const st=Math.round(B.s*S[3]);const h=Math.max(6,Math.round(st/20));return{n:S[0],f:S[1],i:S[2],g:S[4],st,h,sup:Math.max(1,Math.round(h/12)),att:Math.round(88+rr(b*7+i)*7),ach:Math.min(98,Math.round(B.ach-6+rr(b*3+i)*12))}}
+function halData(b,s,j){const g=s===1;const k=b*100+s*10+j;return{n:'حلقة '+(g?HNG:HNB)[j%10],t:(g?TNG:TNB)[(j+b)%10],st:17+Math.floor(rr(k)*7),avg:(7.6+rr(k+1)*2).toFixed(1),att:Math.round(86+rr(k+2)*12),ach:Math.round(62+rr(k+3)*36),sup:SUPN[(b+s+Math.floor(j/4))%6]}}
+function crumbs(list){return list.map((c,i)=>i<list.length-1?`<a href="#${c[1]}" data-nav="${c[1]}">${c[0]}</a><i></i>`:`<b>${c[0]}</b>`).join('')}
+function band(eb,title,sub,k){return `<div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>${eb}</span><h1 style="margin-top:6px">${title}</h1><p>${sub}</p></div></div><div class="kgrid" style="grid-template-columns:repeat(${k.length},1fr)">${k.map(x=>`<div class="kg"><div class="ki">${ic(x[0])}</div><b class="tn">${x[1]}</b><span>${x[2]}</span>${x[3]?`<em>${x[3]}</em>`:''}</div>`).join('')}</div>`}
+function xc(o){return `<a class="xc" href="#${o.nav}" data-nav="${o.nav}" ${o.data||''}><div class="xc-top"><span class="xc-i">${ic(o.i)}</span><div class="xc-t"><h3>${o.t}</h3><small>${o.sub}</small></div>${o.tag?`<span class="xc-tag">${o.tag}</span>`:''}</div><div class="xc-st">${o.st.map(s=>`<div><b class="tn">${s[0]}</b><small>${s[1]}</small></div>`).join('')}</div><div class="xc-bar"><span>${o.bl}</span><b class="tn">${o.bv}%</b></div><div class="bar ${o.bv<75?'warn':''}"><b style="width:${o.bv}%"></b></div><span class="xc-go">${o.go} ←</span></a>`}
+function brCard(i,body,go,nav){const b=BR[i],C=2*Math.PI*30;return `<a class="bc" href="#${nav}" data-nav="${nav}" data-b="${i}"><div class="bc-top" style="background:${BG[i]}"><div class="bc-pat"></div><div class="bc-row"><div><span class="bc-code" dir="ltr">BR-${b.c}</span><h3>فرع ${b.n}</h3><small>تأسس ${FOUND[i]}</small></div><div class="bc-ring"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="30" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="6"/><circle cx="36" cy="36" r="30" fill="none" stroke="#FCC709" stroke-width="6" stroke-linecap="round" stroke-dasharray="${C*b.cap/100} ${C}" transform="rotate(-90 36 36)"/></svg><b class="tn">${b.cap}%</b></div></div><div class="bc-cap">الطاقة الاستيعابية المشغولة</div></div><div class="bc-body">${body}<span class="xc-go">${go} ←</span></div></a>`}
+const STAT=(a)=>`<div class="bc-st">${a.map(x=>`<div><b class="tn">${x[0]}</b><small>${x[1]}</small></div>`).join('')}</div>`;
+function rStudents(){
+  $('#bStu').innerHTML=band('الأشخاص','الطلاب','21,480 طالباً في خمسة فروع. اختر الفرع لعرض أقسامه وحلقاته.',[['cap','21,480','إجمالي الطلاب','+640 هذا الشهر'],['pen','5,585','تأسيس القراءة والكتابة'],['book','15,895','حفظ القرآن الكريم'],['alert','142','منقطعون','تحتاج متابعة']]);
+  $('#stuBr').innerHTML=BR.map((b,i)=>{const t=Math.round(b.s*.26);return brCard(i,STAT([[fmt(b.s),'طالب'],[fmt(t),'تأسيس'],[fmt(b.s-t),'قرآن']])+`<div class="bc-chips"><span class="chip">منتظم ${fmt(b.s-[27,25,31,30,29][i]-Math.round(b.s*.018))}</span><span class="chip o">متأخر ${Math.round(b.s*.018)}</span><span class="chip r">منقطع ${[27,25,31,30,29][i]}</span></div><div class="bc-ach"><span>حضور اليوم</span><b class="tn">${b.att}%</b></div><div class="bar"><b style="width:${b.att}%"></b></div>`,'عرض الأقسام','stu-branch')}).join('');
+}
+function rStuBranch(){const b=CTX.b,B=BR[b];$('#crStuB').innerHTML=crumbs([['الطلاب','students'],['فرع '+B.n]]);
+  $('#bStuB').innerHTML=band('الطلاب · BR-'+B.c,'فرع '+B.n,'أقسام الفرع وفتراته. اختر القسم لعرض حلقاته.',[['cap',fmt(B.s),'طالب'],['circle',B.h,'حلقة'],['check',B.att+'%','حضور اليوم'],['target',B.ach+'%','إنجاز المستهدف']]);
+  $('#stuSecs').innerHTML=SECS.map((x,i)=>{const d=secData(b,i);return xc({nav:'stu-sec',data:`data-s="${i}"`,i:d.i,t:d.n,sub:'الفترة '+d.f+' · '+d.g,tag:d.f,st:[[fmt(d.st),'طالب'],[d.h,'حلقة'],[d.sup,'مشرف']],bl:'حضور اليوم',bv:d.att,go:'عرض الحلقات'})}).join('');
+}
+function rStuSec(){const b=CTX.b,s=CTX.s,B=BR[b],d=secData(b,s);$('#crStuS').innerHTML=crumbs([['الطلاب','students'],['فرع '+B.n,'stu-branch'],[d.n]]);
+  $('#bStuS').innerHTML=band('فرع '+B.n+' · الفترة '+d.f,d.n,'حلقات القسم ومعلموها. اختر الحلقة لعرض كشف طلابها.',[['cap',fmt(d.st),'طالب'],['circle',d.h,'حلقة'],['star',d.sup,'مشرف'],['check',d.att+'%','حضور اليوم']]);
+  const n=Math.min(d.h,8);let h='';for(let j=0;j<n;j++){const H=halData(b,s,j);h+=xc({nav:'stu-list',data:`data-h="${j}"`,i:'circle',t:H.n,sub:H.t+' · المشرف '+H.sup,tag:'متوسط '+H.avg,st:[[H.st,'طالب'],[H.att+'%','حضور'],[H.avg,'الدرجة']],bl:'إنجاز الخطة',bv:H.ach,go:'كشف الطلاب'})}
+  if(d.h>n)h+=`<div class="xc more"><span class="xc-i">${ic('plus')}</span><b class="tn">+${d.h-n} حلقة أخرى</b><small>في النسخة الفعلية تظهر جميع حلقات القسم مع البحث والترتيب.</small></div>`;
+  $('#stuHals').innerHTML=h;
+}
+function rStuList(){const b=CTX.b,s=CTX.s,B=BR[b],d=secData(b,s),H=halData(b,s,CTX.h);$('#crStuL').innerHTML=crumbs([['الطلاب','students'],['فرع '+B.n,'stu-branch'],[d.n,'stu-sec'],[H.n]]);
+  $('#lstTitle').textContent=H.n;$('#lstSub').textContent='فرع '+B.n+' · '+d.n+' · '+H.t+' · '+H.st+' طالباً';
+  ST.length=0;const g=s===1;for(let i=0;i<H.st;i++){const k=b*1000+s*100+CTX.h*10+i;const status=rr(k)<.06?'منقطع':(rr(k+5)<.14?'متأخر':'منتظم');const path=s===2?'تأسيس':'قرآن';ST.push({code:`ST-0${b+1}-0${4100+Math.floor(rr(k+9)*5800)}`,name:(g?GN[i%20]:FN[i%20])+' '+LN[(i+b+s)%10],age:7+Math.floor(rr(k+3)*8),b:B.n,path,stage:path==='تأسيس'?['الحروف','المدود','القراءة'][i%3]:['جزء عمّ','جزء تبارك','خمسة أجزاء','عشرة أجزاء'][i%4],hal:H.n.replace('حلقة ',''),prog:status==='منقطع'?Math.round(18+rr(k+4)*20):(status==='متأخر'?Math.round(38+rr(k+6)*14):Math.round(55+rr(k+7)*43)),status})}
+  $('#fBranch').value='';renderStu();
+}
+const ROLESS=[['المديرون ونوابهم','home',b=>3],['المشرفون والمشرفات','star',b=>Math.round(BR[b].h/12)],['المعلمون','book',b=>Math.round(BR[b].h*.45)],['المعلمات','book',b=>BR[b].h-Math.round(BR[b].h*.45)],['الإداريون والمحاسبون','wallet',b=>6+b%3],['العاملات والخدمات','users',b=>10+b*2]];
+const stTotal=b=>ROLESS.reduce((a,r)=>a+r[2](b),0);
+function rStaff(){const tot=BR.reduce((a,_,i)=>a+stTotal(i),0);
+  $('#bStf').innerHTML=band('الأشخاص','العاملون',fmt(tot)+' عاملاً في خمسة فروع. اختر الفرع لعرض العاملين حسب الوظيفة.',[['users',fmt(tot),'إجمالي العاملين'],['book',fmt(BR.reduce((a,b)=>a+b.h,0)),'معلم ومعلمة'],['star',fmt(BR.reduce((a,b)=>a+Math.round(b.h/12),0)),'مشرف ومشرفة'],['check','96.2%','حضور العاملين اليوم']]);
+  $('#stfBr').innerHTML=BR.map((b,i)=>brCard(i,STAT([[fmt(stTotal(i)),'عامل'],[b.h,'معلم'],[Math.round(b.h/12),'مشرف']])+`<div class="bc-ach"><span>حضور العاملين اليوم</span><b class="tn">${95+i%4}%</b></div><div class="bar"><b style="width:${95+i%4}%"></b></div><div class="bc-ach"><span>متوسط التقييم الشهري</span><b class="tn">${[89,87,85,84,80][i]}</b></div>`,'عرض الوظائف','staff-branch')).join('');
+}
+function rStaffBranch(){const b=CTX.b,B=BR[b];$('#crStfB').innerHTML=crumbs([['العاملون','staff'],['فرع '+B.n]]);
+  $('#bStfB').innerHTML=band('العاملون · BR-'+B.c,'فرع '+B.n,'العاملون حسب الوظيفة. اختر الوظيفة لعرض الكشف.',[['users',fmt(stTotal(b)),'عامل'],['check',(95+b%4)+'%','حضور اليوم'],['clock',3+b,'متأخرون اليوم'],['star',[89,87,85,84,80][b],'متوسط التقييم']]);
+  $('#stfRoles').innerHTML=ROLESS.map((r,i)=>{const n=r[2](b),pr=Math.max(1,n-Math.round(n*.04)-(i%2));return xc({nav:'staff-list',data:`data-r="${i}"`,i:r[1],t:r[0],sub:'فرع '+B.n,tag:fmt(n),st:[[fmt(n),'العدد'],[fmt(pr),'حاضر اليوم'],[(80+Math.round(rr(b*9+i)*15)),'التقييم']],bl:'الانضباط',bv:Math.round(90+rr(b*5+i)*9),go:'عرض الكشف'})}).join('');
+}
+function rStaffList(){const b=CTX.b,r=CTX.r,B=BR[b],R=ROLESS[r];$('#crStfL').innerHTML=crumbs([['العاملون','staff'],['فرع '+B.n,'staff-branch'],[R[0]]]);
+  $('#stfTitle').textContent=R[0];$('#stfSub').textContent='فرع '+B.n+' · '+fmt(R[2](b))+' عاملاً';
+  const role=['مدير فرع','مشرف','معلم','معلمة','إداري','عاملة'][r];const pool=r===3||r===5?TNG.concat(SUPN.filter((_,i)=>i%2)):TNB.concat(SUPN.filter((_,i)=>!(i%2)));
+  const n=Math.min(R[2](b),12);let rows='';for(let i=0;i<n;i++){const k=b*500+r*50+i;const ev=Math.round(70+rr(k)*28),dis=Math.round(86+rr(k+1)*14);const scope=r<2?(r===0?(i?'نائب مدير':'مدير الفرع'):Math.round(10+rr(k+2)*4)+' حلقة'):(r<4?'حلقة '+(r===3?HNG:HNB)[i%10]+' · '+(17+Math.floor(rr(k+3)*7))+' طالباً':'الفترة '+(i%2?'المسائية':'الصباحية'));const nm=pool[i%pool.length];
+    rows+=`<tr><td><div class="who"><span class="av-s g">${nm.replace('أ. ','')[0]}</span><div><b>${nm}</b><small>${scope}</small></div></div></td><td><span class="chip ${r===0?'g':r===1?'s':'n'}">${role}</span></td><td>${B.n}</td><td><div style="display:flex;align-items:center;gap:8px"><div class="bar ${ev<75?'warn':''}" style="width:100px"><b style="width:${ev}%"></b></div><b class="tn">${ev}</b></div></td><td class="tn">${dis}%</td><td><button class="btn btn-line btn-sm" data-toast="ملف ${nm} (استعراضي)">الملف</button></td></tr>`}
+  $('#staffTbl').innerHTML='<thead><tr><th>الاسم</th><th>الوظيفة</th><th>الفرع</th><th>تقييم أكتوبر</th><th>الانضباط</th><th></th></tr></thead><tbody>'+rows+'</tbody>';
+}
+const HR={students:rStudents,'stu-branch':rStuBranch,'stu-sec':rStuSec,'stu-list':rStuList,staff:rStaff,'staff-branch':rStaffBranch,'staff-list':rStaffList};
+document.addEventListener('click',e=>{const a=e.target.closest('[data-nav]');if(!a)return;['b','s','h','r'].forEach(k=>{if(a.dataset[k]!==undefined)CTX[k]=+a.dataset[k]});});
+function renderHier(){const v=(location.hash||'').slice(1);if(HR[v])HR[v]()}
+window.addEventListener('hashchange',renderHier);renderHier();
+
+
+// ===== card hubs for evaluation, follow-up, targets, finance
+function hubBr(bandId,gridId,eb,title,sub,k,body,go,nav){$(bandId).innerHTML=band(eb,title,sub,k);$(gridId).innerHTML=BR.map((b,i)=>brCard(i,body(b,i),go,nav)).join('')}
+const EV_T=[['تقييم الطلاب بالعينة','users','عينة أسبوعية عشوائية من كل حلقة'],['تقييم المعلمين','book','نموذج شهري ببنود وأوزان'],['تقييم المعلمات','book','نموذج شهري ببنود وأوزان'],['تقييم المشرفين','star','يسجله مدير الفرع'],['تقييم مدير الفرع','home','يسجله مدير إدارة الفروع'],['الاختبار الشهري ومحطات السرد','file','نتائج الطلاب لكل حلقة']];
+const FU_T=[['المنقطعون','alert','10 أيام عمل بلا حضور','r'],['المتأخرون عن الخطة','clock','تجاوزوا نهاية مرحلتهم المتوقعة','o'],['تحت المتابعة','star','حالات وضعها المشرف','g'],['الغياب المتكرر','users','3 أيام متتالية أو 5 في الشهر','s']];
+function rEval(){hubBr('#bEv','#evBr','الأداء','التقييم','اختر الفرع، ثم نوع التقييم.',[['star','86.4','متوسط تقييم العاملين'],['users','63%','الطلاب المختبرون هذا الفصل'],['check','1,018','تقييم معتمد هذا الشهر'],['clock','42','تقييم بانتظار الاعتماد']],(b,i)=>STAT([[b.h,'معلم'],[Math.round(b.h/12),'مشرف'],[[89,87,85,84,80][i],'المتوسط']])+`<div class="bc-ach"><span>الطلاب المختبرون هذا الفصل</span><b class="tn">${[68,64,61,63,57][i]}%</b></div><div class="bar"><b style="width:${[68,64,61,63,57][i]}%"></b></div>`,'أنواع التقييم','eval-branch')}
+function rEvalBranch(){const b=CTX.b,B=BR[b];$('#crEvB').innerHTML=crumbs([['التقييم','evaluation'],['فرع '+B.n]]);$('#bEvB').innerHTML=band('التقييم · BR-'+B.c,'فرع '+B.n,'اختر نوع التقييم.',[['star',[89,87,85,84,80][b],'متوسط التقييم'],['users',[68,64,61,63,57][b]+'%','مختبرون بالعينة'],['clock',6+b*2,'بانتظار الاعتماد']]);
+  $('#evTypes').innerHTML=EV_T.map((t,i)=>{const done=Math.round(70+rr(b*11+i)*28);return xc({nav:'eval-run',data:`data-r="${i}"`,i:t[1],t:t[0],sub:t[2],tag:'نوفمبر',st:[[i===0?Math.round(BR[b].h*.6):i===5?BR[b].h:i<3?Math.round(BR[b].h/2):i===3?Math.round(BR[b].h/12):1,i===0||i===5?'حلقة':'مقيَّم'],[(80+Math.round(rr(b*3+i)*14)),'المتوسط'],[Math.round(rr(b+i)*9),'معلّق']],bl:'نسبة الإنجاز هذا الشهر',bv:done,go:'فتح التقييم'})}).join('')}
+function rEvalRun(){const b=CTX.b,B=BR[b],t=EV_T[CTX.r]||EV_T[0];$('#crEvR').innerHTML=crumbs([['التقييم','evaluation'],['فرع '+B.n,'eval-branch'],[t[0]]])}
+function rFu(){hubBr('#bFu','#fuBr','المتابعة','المنقطعون والمتأخرون','اختر الفرع لعرض حالاته.',[['alert','142','منقطعون'],['clock','386','متأخرون عن الخطة'],['star','97','تحت المتابعة'],['users','211','غياب متكرر']],(b,i)=>{const d=[27,25,31,30,29][i],l=Math.round(b.s*.018);return STAT([[d,'منقطع'],[l,'متأخر'],[[19,22,18,21,17][i],'متابعة']])+`<div class="bc-chips"><span class="chip r">أعلى سبب: ظروف الأسرة</span></div><div class="bc-ach"><span>نسبة الانقطاع</span><b class="tn">${(d/b.s*100).toFixed(1)}%</b></div><div class="bar red"><b style="width:${d/b.s*100*40}%"></b></div>`},'عرض الحالات','fu-branch')}
+function rFuBranch(){const b=CTX.b,B=BR[b];$('#crFuB').innerHTML=crumbs([['المتابعة','followup'],['فرع '+B.n]]);$('#bFuB').innerHTML=band('المتابعة · BR-'+B.c,'فرع '+B.n,'اختر نوع الحالة.',[['alert',[27,25,31,30,29][b],'منقطع'],['clock',Math.round(B.s*.018),'متأخر'],['star',[19,22,18,21,17][b],'تحت المتابعة']]);
+  $('#fuTypes').innerHTML=FU_T.map((t,i)=>{const n=[[27,25,31,30,29][b],Math.round(B.s*.018),[19,22,18,21,17][b],[44,39,47,41,40][b]][i];return xc({nav:'fu-list',data:`data-r="${i}"`,i:t[1],t:t[0],sub:t[2],tag:n+' حالة',st:[[n,'حالة'],[Math.round(n*.4),'تمت متابعتها'],[Math.round(n*.15),'عادوا']],bl:'نسبة المتابعة',bv:Math.round(35+rr(b*7+i)*50),go:'عرض الحالات'})}).join('')}
+function rFuList(){const b=CTX.b,B=BR[b],t=FU_T[CTX.r]||FU_T[0];$('#crFuL').innerHTML=crumbs([['المتابعة','followup'],['فرع '+B.n,'fu-branch'],[t[0]]])}
+function rTg(){hubBr('#bTg','#tgBr','الأداء','المستهدفات والإنجازات','اختر الفرع لعرض مستهدفاته حسب المستوى.',[['target','84%','تحقق المؤسسة'],['check','10,080','المُنجز'],['alert','1,920','العجز'],['clock','9 أيام','متبقٍ من الشهر']],(b,i)=>STAT([[fmt(Math.round(b.s*.56)),'المستهدف'],[fmt(Math.round(b.s*.56*b.ach/100)),'المُنجز'],[b.ach+'%','التحقق']])+`<div class="bc-ach"><span>تحقق المستهدف الشهري</span><b class="tn">${b.ach}%</b></div><div class="bar ${b.ach<75?'warn':''}"><b style="width:${b.ach}%"></b></div>`,'عرض المستهدفات','tg-run')}
+function rTgRun(){const B=BR[CTX.b];$('#crTg').innerHTML=crumbs([['المستهدفات','targets'],['فرع '+B.n]])}
+function rFin(){hubBr('#bFin','#finBr','المالية','الرسوم والتحصيل','اختر الفرع لعرض إيصالاته وتحصيله.',[['wallet','18,450','تحصيل اليوم'],['chart','412,300','تحصيل الشهر'],['target','84.8%','نسبة التحصيل'],['clock','1,036','متأخرون عن السداد']],(b,i)=>STAT([[fmt([96400,84200,78900,81300,71500][i]),'تحصيل الشهر'],[[21,18,17,19,15][i],'إيصال اليوم'],[[188,201,219,231,197][i],'متأخر']])+`<div class="bc-ach"><span>نسبة التحصيل</span><b class="tn">${b.fin}%</b></div><div class="bar gold"><b style="width:${b.fin}%"></b></div>`,'عرض التحصيل','fin-run')}
+function rFinRun(){const B=BR[CTX.b];$('#crFin').innerHTML=crumbs([['الرسوم والتحصيل','finance'],['فرع '+B.n]])}
+Object.assign(HR,{evaluation:rEval,'eval-branch':rEvalBranch,'eval-run':rEvalRun,followup:rFu,'fu-branch':rFuBranch,'fu-list':rFuList,targets:rTg,'tg-run':rTgRun,finance:rFin,'fin-run':rFinRun});
+renderHier();
+
 // router
 const APP={dashboard:['الرئيسية','لوحة مدير إدارة الفروع'],branches:['الفروع','الهيكل'],branch:['فرع الفرقان','الأقسام والحلقات'],students:['الطلاب','الأشخاص'],student:['ملف الطالب','الطلاب › فرع الحياة'],staff:['العاملون','الأشخاص'],targets:['المستهدفات','الأداء'],evaluation:['التقييم','الأداء'],requests:['الطلبات','القرارات'],followup:['المتابعة','المنقطعون والمتأخرون'],finance:['الرسوم والتحصيل','المالية'],reports:['التقارير','طباعة وتصدير'],teacher:['دفتر الحلقة','واجهة المعلم على الجوال'],parent:['ولي الأمر','واجهة ولي الأمر على الجوال']};
+Object.assign(APP,{'stu-branch':['الطلاب','حسب الفرع'],'stu-sec':['الطلاب','حسب القسم'],'stu-list':['الطلاب','كشف الحلقة'],'staff-branch':['العاملون','حسب الفرع'],'staff-list':['العاملون','كشف الوظيفة'],'eval-branch':['التقييم','حسب الفرع'],'eval-run':['التقييم','النموذج'],'fu-branch':['المتابعة','حسب الفرع'],'fu-list':['المتابعة','الحالات'],'tg-run':['المستهدفات','الفرع'],'fin-run':['الرسوم والتحصيل','الفرع']});
 const ROLE={dashboard:['أ. عبدالله الشهري','مدير إدارة الفروع'],branch:['أ. سالم باوزير','مدير فرع الفرقان'],evaluation:['أ. ياسر حسن','مشرف · فرع الحياة'],teacher:['أ. عمر سعيد','معلم · فرع خلود'],finance:['أ. وليد قاسم','محاسب · فرع الحياة'],parent:['محمد سالم','ولي أمر']};
 const app=$('#app');
 $('#menuBtn').addEventListener('click',()=>app.classList.toggle('menu'));
-function route(){let v=(location.hash||'#home').slice(1);if(!document.getElementById('v-'+v))v='home';$$('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));const isApp=!!APP[v];app.classList.toggle('on',isApp);app.classList.remove('menu');document.body.style.background=isApp||v==='register'||v==='login'?'var(--ivory)':'#FFFFFF';if(isApp){const map={student:'students'};const tab=map[v]||v;$$('#side a[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===tab));$('#pgTitle').textContent=APP[v][0];$('#pgSub').textContent=APP[v][1];if(ROLE[v]){$('#meName').textContent=ROLE[v][0];$('#meRole').textContent=ROLE[v][1];$('#meAv').textContent=ROLE[v][0].replace('أ. ','')[0]}}window.scrollTo(0,0)}
+Object.assign(ROLE,{'eval-branch':ROLE.evaluation,'eval-run':ROLE.evaluation,'fin-run':ROLE.finance});
+function route(){let v=(location.hash||'#home').slice(1);if(!document.getElementById('v-'+v))v='home';$$('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));const isApp=!!APP[v];app.classList.toggle('on',isApp);app.classList.remove('menu');document.body.style.background=isApp||v==='register'||v==='login'?'var(--ivory)':'#FFFFFF';if(isApp){const map={student:'students','stu-branch':'students','stu-sec':'students','stu-list':'students','staff-branch':'staff','staff-list':'staff','eval-branch':'evaluation','eval-run':'evaluation','fu-branch':'followup','fu-list':'followup','tg-run':'targets','fin-run':'finance'};const tab=map[v]||v;$$('#side a[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===tab));$('#pgTitle').textContent=APP[v][0];$('#pgSub').textContent=APP[v][1];if(ROLE[v]){$('#meName').textContent=ROLE[v][0];$('#meRole').textContent=ROLE[v][1];$('#meAv').textContent=ROLE[v][0].replace('أ. ','')[0]}}window.scrollTo(0,0)}
 window.addEventListener('hashchange',route);route();
 })();
 </script>
