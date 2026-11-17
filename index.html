@@ -1075,6 +1075,68 @@ h1,h2,h3{font-family:var(--f-display);letter-spacing:-.2px}
   .kg b{font-size:18px}
   .stat b{font-size:22px}
 }
+
+/* ======== PAGE TRANSITIONS ======== */
+@keyframes viewIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.view.on{animation:viewIn .32s ease-out}
+@media(prefers-reduced-motion:reduce){.view.on{animation:none}}
+
+/* ======== ROLE CARDS: bigger icons, better hover ======== */
+.role .ri{width:56px;height:56px;border-radius:16px}
+.role .ri .ico{width:26px;height:26px}
+.role b{font-size:16px;font-family:var(--f-display)}
+.role small{color:var(--muted);font-size:13px;display:block;margin-top:2px}
+.role:hover{transform:translateY(-3px);box-shadow:0 16px 32px -16px rgba(29,106,117,.4),inset 0 0 0 1.5px var(--gold)}
+.role:hover .ri{background:var(--gold-grad);color:#2A1F04}
+
+/* ======== SIDEBAR ACTIVE INDICATOR ======== */
+.side .grp a.on{background:linear-gradient(90deg,rgba(252,199,9,.12),rgba(63,163,176,.08));color:var(--gold-2);font-weight:600}
+.side .grp a.on .si{background:var(--gold-grad);color:#2A1F04}
+
+/* ======== CRUMBS polish ======== */
+.crumbs{background:var(--paper);border-radius:14px;padding:10px 16px;margin-bottom:18px;box-shadow:0 2px 8px -4px rgba(0,0,0,.08)}
+.crumbs a:hover{background:var(--gold-l);color:var(--gold-d)}
+
+/* ======== REPORT CARDS: professional look ======== */
+#repGrid .card{transition:transform .2s,box-shadow .2s}
+#repGrid .card:hover{transform:translateY(-2px);box-shadow:0 24px 48px -24px rgba(29,106,117,.35)}
+#repGrid .card .li{padding:11px 0;border-bottom:1px solid var(--line);transition:background .15s}
+#repGrid .card .li:last-child{border-bottom:0}
+#repGrid .card .li:hover{background:var(--ivory);border-radius:10px;padding-inline:10px;margin-inline:-10px}
+
+/* ======== BAND: glass morphism refinement ======== */
+.band .kgrid{margin-top:22px}
+.band .kg{background:rgba(255,255,255,.06);border-radius:16px;padding:16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.band h1{font-family:var(--f-display);font-size:28px;letter-spacing:-.3px}
+
+/* ======== XC CARDS (hub navigation cards): polish ======== */
+.xc:hover{transform:translateY(-3px);box-shadow:0 32px 56px -40px rgba(29,106,117,.8),inset 0 0 0 1.5px var(--gold)}
+.xc-i{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--em-5),var(--em-8));color:var(--gold-2);flex:none}
+.xc-i .ico{width:22px;height:22px}
+.xc-go{font-weight:600;color:var(--em-8);font-size:13.5px;margin-top:12px;display:flex;align-items:center;gap:6px;transition:gap .2s}
+.xc:hover .xc-go{gap:10px}
+
+/* ======== TEACHER & PARENT stages: bigger, bolder ======== */
+.stage h1{font-family:var(--f-display);font-size:clamp(28px,3.5vw,42px);line-height:1.2;color:var(--em-8);letter-spacing:-.3px}
+.stage .eyebrow{font-size:16px}
+.stage .howto{margin-top:18px;padding-inline-start:20px;display:flex;flex-direction:column;gap:8px;color:var(--ink-2);font-size:14.5px}
+.stage .howto b{color:var(--em-8)}
+
+/* ======== PHONE MOCKUP: softer shadow ======== */
+.phone{box-shadow:0 40px 80px -30px rgba(0,0,0,.35),0 0 0 1px rgba(29,106,117,.2)}
+
+/* ======== TABLE: row hover ======== */
+.t tbody tr{transition:background .15s}
+.t tbody tr:hover{background:rgba(29,106,117,.03)}
+.t tbody tr.click:hover{background:rgba(252,199,9,.06);cursor:pointer}
+
+/* ======== TOPBAR: role display polish ======== */
+.acct{transition:background .15s;border-radius:14px;padding:6px 10px;margin-inline-start:auto}
+.acct:hover{background:rgba(252,199,9,.08)}
+
+/* ======== LOGIN PAGE: role card pulse ======== */
+.ax-card .roles{gap:14px}
+.ax-sub{color:var(--muted);font-size:14px;margin-top:6px}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1282,12 +1344,12 @@ h1,h2,h3{font-family:var(--f-display);letter-spacing:-.2px}
       <h2>اختر الدور الذي تريد استعراضه</h2>
       <p class="ax-sub">في النسخة الفعلية يدخل كل مستخدم باسمه وكلمة مروره.</p>
     <div class="roles">
-      <a class="role" href="#dashboard"><div class="ri"><svg class="ico"><use href="#i-home"/></svg></div><div><b>مدير إدارة الفروع</b><small>كل الفروع والاعتمادات الكبرى</small></div></a>
-      <a class="role" href="#branch"><div class="ri"><svg class="ico"><use href="#i-branch"/></svg></div><div><b>مدير الفرع</b><small>فرعه ومعلموه ومشرفوه</small></div></a>
-      <a class="role" href="#evaluation"><div class="ri"><svg class="ico"><use href="#i-star"/></svg></div><div><b>المشرف</b><small>حلقاته وتقييماته وطلباته</small></div></a>
-      <a class="role" href="#teacher"><div class="ri"><svg class="ico"><use href="#i-book"/></svg></div><div><b>المعلم والمعلمة</b><small>دفتر الحلقة من الجوال</small></div></a>
-      <a class="role" href="#finance"><div class="ri"><svg class="ico"><use href="#i-wallet"/></svg></div><div><b>المحاسب</b><small>الرسوم والإيصالات والمصروفات</small></div></a>
-      <a class="role" href="#parent"><div class="ri"><svg class="ico"><use href="#i-parent"/></svg></div><div><b>ولي الأمر</b><small>متابعة الأبناء والرسوم</small></div></a>
+      <a class="role" href="#dashboard"><div class="ri"><svg class="ico"><use href="#i-home"/></svg></div><div><b>مدير إدارة الفروع</b><small>لوحة شاملة بمقارنة الفروع والاعتمادات والتقارير</small></div></a>
+      <a class="role" href="#branch"><div class="ri"><svg class="ico"><use href="#i-branch"/></svg></div><div><b>مدير الفرع</b><small>أقسام فرعه وحلقاته ومعلموه ومشرفوه</small></div></a>
+      <a class="role" href="#evaluation"><div class="ri"><svg class="ico"><use href="#i-star"/></svg></div><div><b>المشرف والمشرفة</b><small>تقييم المعلمين وسحب العينات ومتابعة الحلقات</small></div></a>
+      <a class="role" href="#teacher"><div class="ri"><svg class="ico"><use href="#i-book"/></svg></div><div><b>المعلم والمعلمة</b><small>دفتر الحلقة بالكامل من رابط على الجوال</small></div></a>
+      <a class="role" href="#finance"><div class="ri"><svg class="ico"><use href="#i-wallet"/></svg></div><div><b>المحاسب</b><small>تحصيل الرسوم نقداً وطباعة الإيصالات</small></div></a>
+      <a class="role" href="#parent"><div class="ri"><svg class="ico"><use href="#i-parent"/></svg></div><div><b>ولي الأمر</b><small>حضور ابنه ودرجاته وملاحظات المعلم والرسوم</small></div></a>
     </div>
       <p class="conf-l">جميع الحقوق محفوظة للمهندس أسامة محمد، مُعدّ هذا الموقع والمؤسسة وكل محتواها. هذه نسخة استعراضية سرية، ولا يجوز نسخها أو مشاركتها أو عرضها على أي جهة إلا بإذن كتابي من م. أسامة محمد.</p>
     </div>
@@ -1480,7 +1542,8 @@ h1,h2,h3{font-family:var(--f-display);letter-spacing:-.2px}
 
 <!-- REPORTS -->
 <section class="view" id="v-reports">
-  <div class="band"><div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>التقارير</span><h1 style="margin-top:6px">التقارير</h1><p>كل تقرير يُطبع مباشرة أو يُصدَّر PDF و Excel، ويُفلتر بالفرع والفترة.</p></div></div></div>
+  <div class="band"><div class="pat"></div><div class="bh"><div><span class="eyebrow"><i></i>طباعة وتصدير</span><h1 style="margin-top:6px">التقارير</h1><p>كل تقرير يُطبع مباشرة أو يُصدَّر PDF و Excel، ويُفلتر بالفرع والفترة والتاريخ.</p></div><div style="display:flex;gap:8px"><button class="btn btn-gold btn-sm" data-toast="نموذج تقرير مخصص (استعراضي)"><svg class="ico"><use href="#i-plus"/></svg>تقرير مخصص</button></div></div>
+  <div class="kgrid" style="grid-template-columns:repeat(4,1fr)"><div class="kg"><div class="ki"><svg class="ico"><use href="#i-file"/></svg></div><b class="tn">21</b><span>نوع تقرير</span></div><div class="kg"><div class="ki"><svg class="ico"><use href="#i-chart"/></svg></div><b class="tn">PDF</b><span>طباعة مباشرة</span></div><div class="kg"><div class="ki"><svg class="ico"><use href="#i-target"/></svg></div><b class="tn">Excel</b><span>تصدير جداول</span></div><div class="kg"><div class="ki"><svg class="ico"><use href="#i-branch"/></svg></div><b class="tn">5</b><span>فروع</span></div></div></div>
   <div class="grid" id="repGrid"></div>
 </section>
 
@@ -1728,7 +1791,7 @@ const ROLE={dashboard:['أ. عبدالله الشهري','مدير إدارة ا
 const app=$('#app');
 $('#menuBtn').addEventListener('click',()=>app.classList.toggle('menu'));
 Object.assign(ROLE,{'eval-branch':ROLE.evaluation,'eval-run':ROLE.evaluation,'fin-run':ROLE.finance});
-function route(){let v=(location.hash||'#home').slice(1);if(!document.getElementById('v-'+v))v='home';$$('.view').forEach(s=>s.classList.toggle('on',s.id==='v-'+v));const isApp=!!APP[v];app.classList.toggle('on',isApp);app.classList.remove('menu');document.body.style.background=isApp||v==='register'||v==='login'?'var(--ivory)':'#FFFFFF';if(isApp){const map={student:'students','stu-branch':'students','stu-sec':'students','stu-list':'students','staff-branch':'staff','staff-list':'staff','eval-branch':'evaluation','eval-run':'evaluation','fu-branch':'followup','fu-list':'followup','tg-run':'targets','fin-run':'finance'};const tab=map[v]||v;$$('#side a[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===tab));$('#pgTitle').textContent=APP[v][0];$('#pgSub').textContent=APP[v][1];if(ROLE[v]){$('#meName').textContent=ROLE[v][0];$('#meRole').textContent=ROLE[v][1];$('#meAv').textContent=ROLE[v][0].replace('أ. ','')[0]}}const mn=$('#mobNav');if(mn){mn.style.display=isApp?'block':'none';$$('#mobNav a').forEach(a=>a.classList.toggle('on',a.dataset.v===tab))}window.scrollTo(0,0)}
+function route(){let v=(location.hash||'#home').slice(1);if(!document.getElementById('v-'+v))v='home';$$('.view').forEach(s=>{const show=s.id==='v-'+v;if(show&&!s.classList.contains('on'))s.style.animation='none',s.offsetHeight,s.style.animation='';s.classList.toggle('on',show)});const isApp=!!APP[v];app.classList.toggle('on',isApp);app.classList.remove('menu');document.body.style.background=isApp||v==='register'||v==='login'?'var(--ivory)':'#FFFFFF';if(isApp){const map={student:'students','stu-branch':'students','stu-sec':'students','stu-list':'students','staff-branch':'staff','staff-list':'staff','eval-branch':'evaluation','eval-run':'evaluation','fu-branch':'followup','fu-list':'followup','tg-run':'targets','fin-run':'finance'};const tab=map[v]||v;$$('#side a[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===tab));$('#pgTitle').textContent=APP[v][0];$('#pgSub').textContent=APP[v][1];if(ROLE[v]){$('#meName').textContent=ROLE[v][0];$('#meRole').textContent=ROLE[v][1];$('#meAv').textContent=ROLE[v][0].replace('أ. ','')[0]}}const mn=$('#mobNav');if(mn){mn.style.display=isApp?'block':'none';$$('#mobNav a').forEach(a=>a.classList.toggle('on',a.dataset.v===tab))}window.scrollTo(0,0)}
 window.addEventListener('hashchange',route);route();
 })();
 </script>
